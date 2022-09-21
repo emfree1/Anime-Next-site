@@ -66,19 +66,18 @@ export const PopupSearch: React.FC<HeaderProps> = ({ isPopupOpen, setIsPopupOpen
               placeholder="You can search for ‘Kyoukai no Kanata’ for example"
             />
             <SearchList>
-              {searchList &&
-                searchList?.map(({ images, title, mal_id, episodes, status, type }) => (
-                  <SearchItem
-                    key={mal_id}
-                    id={mal_id}
-                    type={type}
-                    status={status}
-                    image={images?.jpg?.small_image_url}
-                    title={title}
-                    episodes={episodes}
-                  />
-                ))}
-              {searchText.length >= minLengthText && !searchList.length && (
+              {searchList?.map(({ images, title, mal_id, episodes, status, type }) => (
+                <SearchItem
+                  key={mal_id}
+                  id={mal_id}
+                  type={type}
+                  status={status}
+                  image={images?.jpg?.small_image_url}
+                  title={title}
+                  episodes={episodes}
+                />
+              ))}
+              {searchText.length >= minLengthText && !searchList?.length && (
                 <SearchErrorMessage searchText={searchText} />
               )}
             </SearchList>
