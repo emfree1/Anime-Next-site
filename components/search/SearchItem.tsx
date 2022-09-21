@@ -3,10 +3,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import {
   AnimeImage,
+  AnimeLink,
   Container,
   Episode,
   ImageWrapper,
-  LinkAnime,
   Movie,
   MovieInfo,
   Point,
@@ -29,7 +29,7 @@ export const SearchItem: React.FC<SearchProps> = ({
   mal_id,
 }) => (
   <Link href={`anime/${id}`} className={clasName}>
-    <LinkAnime>
+    <AnimeLink>
       <Container>
         <Wrapper>
           <ImageWrapper>
@@ -51,6 +51,6 @@ export const SearchItem: React.FC<SearchProps> = ({
         </Wrapper>
         <Image src={NextPageIcon} alt="next-page-icon" />
       </Container>
-    </LinkAnime>
+    </AnimeLink>
   </Link>
 );

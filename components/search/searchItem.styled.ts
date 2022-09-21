@@ -68,7 +68,7 @@ export const Episode = styled(Movie)`
 
 export const Status = styled(Movie)``;
 
-export const LinkAnime = styled.a`
+export const AnimeLink = styled.a`
   text-decoration: none;
   cursor: pointer;
 `;

@@ -6,12 +6,7 @@ const ErrorMessage = styled.p`
   text-align: center;
 `;
 
-export const SearchErrorMessage: React.FC<{ searchText: string }> = ({ searchText }) => {
-  return (
-    <>
-      {searchText && (
-        <ErrorMessage>Oops it seems there is nothing for&nbsp; {searchText}</ErrorMessage>
-      )}
-    </>
-  );
-};
+export const SearchErrorMessage: React.FC<{ searchText: string }> = ({ searchText }) =>
+  searchText ? (
+    <ErrorMessage>Oops it seems there is nothing for&nbsp; {searchText}</ErrorMessage>
+  ) : null;
