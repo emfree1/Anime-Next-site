@@ -1,4 +1,4 @@
 export interface PaginationProps {
-  currentPage: number,
-  hasNextPage: boolean
+  currentPage: number;
+  hasNextPage: boolean;
 }

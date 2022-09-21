@@ -1,7 +1,7 @@
-interface AnimePageItemType {
+interface AnimePageItemProps {
   popularity: string;
   rank?: string;
-  score?: string
+  score?: string;
   status?: string;
   episodes?: string;
   source?: string;
@@ -10,11 +10,11 @@ interface AnimePageItemType {
   title?: string;
   images?: {
     jpg: {
-      large_image_url: string
-    }
+      large_image_url: string;
+    };
   };
 }
 
 export interface AnimePageProps {
-  data: AnimePageItemType,
+  data: AnimePageItemProps;
 }

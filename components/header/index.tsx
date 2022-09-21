@@ -1,48 +1,46 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
 import {
   Content,
   DateNow,
   DateToDay,
-  HeaderStyles,
-  IconSearchStyles,
   MobileDate,
   SearchBlock,
+  StyledHeader,
+  StyledIconSearch,
   Text,
-  Title
-} from "./header.styled";
-import {HeaderProps} from "../../interfaces/header";
-import {Container} from "../../styles/global.styled";
-import SearchIcon from "../../assets/icons/search.svg"
+  Title,
+} from './header.styled';
+import { HeaderProps } from '../../interfaces/header';
+import { Container } from '../../styles/global.styled';
+import SearchIcon from '../../assets/icons/search.svg';
+import { getLocaleDate } from '../../helpers/get-locale-date';
 
-const Header: React.FC<HeaderProps> = ({setIsPopup, isPopup}) => {
-
-  const date = new Date()
-  const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-  ];
-  const day = date.getDate()
-  const month = date.toLocaleString(
-    'en-US', {month: 'long'}
-  );
+const Header: React.FC<HeaderProps> = ({ setIsPopupOpen }) => {
+  const { day, month, shortMonth } = getLocaleDate();
 
   return (
-    <HeaderStyles>
+    <StyledHeader>
       <Container>
         <Content>
-          <Link href='/' passHref>
+          <Link href="/" passHref>
             <Title>Anime</Title>
           </Link>
-          <SearchBlock onClick={() => setIsPopup(!isPopup)}>
-            <IconSearchStyles src={SearchIcon.src} alt='search-icon'/>
+          <SearchBlock onClick={() => setIsPopupOpen(true)}>
+            <StyledIconSearch src={SearchIcon.src} alt="search-icon" />
             <Text>Search...</Text>
           </SearchBlock>
-          <DateNow>Today is the&nbsp;<DateToDay>{day}th of {month}</DateToDay></DateNow>
-          <MobileDate>{monthNames[date.getMonth()] + ` ${day}` + 'th'}</MobileDate>
+          <DateNow>
+            Today is the&nbsp;
+            <DateToDay as="span">
+              {day}th of {month}
+            </DateToDay>
+          </DateNow>
+          <MobileDate>{shortMonth + ` ${day}` + 'th'}</MobileDate>
         </Content>
       </Container>
-    </HeaderStyles>
-  )
-}
+    </StyledHeader>
+  );
+};
 
-export default Header
+export default Header;

@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Popup = styled.div`
   width: 100%;
   min-height: 100vh;
   height: 100%;
   position: absolute;
-`
+`;
 
 export const PopupBackground = styled.div`
   position: fixed;
@@ -15,7 +15,7 @@ export const PopupBackground = styled.div`
   right: 0;
   background: rgba(0, 0, 0, 0.6);
   z-index: 1;
-`
+`;
 
 export const InputContainer = styled.div`
   max-width: 618px;
@@ -26,12 +26,11 @@ export const InputContainer = styled.div`
   position: absolute;
   z-index: 2;
   top: 178px;
-  animation: isShowSearch .4s linear forwards;
+  animation: isShowSearch 0.4s linear forwards;
   left: 50%;
   transform: translateX(-50%);
 
   @keyframes isShowSearch {
-
     0% {
       top: 50px;
       visibility: hidden;
@@ -44,7 +43,7 @@ export const InputContainer = styled.div`
       opacity: 1;
     }
   }
-`
+`;
 
 export const Input = styled.input`
   width: 100%;
@@ -56,7 +55,7 @@ export const Input = styled.input`
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  color: #000000;
+  color: var(--black);
   -webkit-box-orient: vertical;
   overflow: hidden;
   display: block;
@@ -67,12 +66,11 @@ export const Input = styled.input`
   &::placeholder {
     font-size: 16px;
     line-height: 19px;
-    color: #B4B4B4;
-
+    color: var(--gray-6);
   }
-`
+`;
 
-export const SearchListContainer = styled.div`
+export const SearchList = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -83,12 +81,11 @@ export const SearchListContainer = styled.div`
   a:last-child {
     margin-bottom: 35px;
   }
-`
+`;
 
-export const CloseIconStyles = styled.img`
+export const StyledCloseIcon = styled.img`
   top: -25px;
   right: 15px;
   cursor: pointer;
   position: absolute;
-
-`
+`;

@@ -1,3 +1,3 @@
 export default {
-    sm: '640px',
+  sm: '640px',
 };

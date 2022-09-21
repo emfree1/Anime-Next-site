@@ -1,4 +1,4 @@
 export interface HeaderProps {
-  setIsPopup: (value: boolean) => void;
-  isPopup: boolean;
+  setIsPopupOpen: (value: boolean) => void;
+  isPopupOpen?: boolean;
 }

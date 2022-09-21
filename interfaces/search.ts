@@ -1,4 +1,4 @@
-export interface SearchItemProps {
+export interface SearchProps {
   id?: string;
   status?: string;
   episodes?: string;
@@ -8,4 +8,3 @@ export interface SearchItemProps {
   image?: string;
   clasName?: string;
 }
-

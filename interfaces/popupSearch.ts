@@ -1,4 +1,4 @@
-export interface PopupSearchItemType {
+export interface PopupSearchProps {
   score?: string;
   status?: string;
   episodes?: string;
@@ -9,6 +9,6 @@ export interface PopupSearchItemType {
   images?: {
     jpg: {
       small_image_url: string;
-    }
+    };
   };
 }
