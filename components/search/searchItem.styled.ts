@@ -66,12 +66,7 @@ export const Episode = styled(Movie)`
   margin-right: 5px;
 `;
 
-export const Status = styled(Movie)`
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
-  color: var(--gray-7);
-`;
+export const Status = styled(Movie)``;
 
 export const LinkAnime = styled.a`
   text-decoration: none;
