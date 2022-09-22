@@ -1,0 +1,10 @@
+.env*
+!.env.EXAMPLE
+node_modules
+.cache
+.vscode
+public
+dist
+.idea
+.DS_Store
+/src/__tests__/__snapshots__/
